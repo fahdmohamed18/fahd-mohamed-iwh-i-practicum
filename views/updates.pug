@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title= title
+        link(rel='stylesheet', href='/css/style.css')
+    body
+        .container
+            h1 Add New Custom Object
+            
+            p.back-link
+                a(href='/') ← Return to the homepage
+            
+            form(method='POST', action='/update-cobj')
+                .form-group
+                    label(for='name') Name *
+                    input(type='text', id='name', name='name', placeholder='Enter name' required)
+                
+                .form-group
+                    label(for='description') Description
+                    textarea(id='description', name='description', rows='4', placeholder='Enter description')
+                
+                .form-group
+                    label(for='category') Category
+                    input(type='text', id='category', name='category', placeholder='Enter category')
+                
+                button(type='submit') ✅ Add Custom Object
+            
+            footer
+                p © 2025 Fahd Mohamed - HubSpot Integration Practicum
